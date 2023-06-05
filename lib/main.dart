@@ -1,3 +1,4 @@
+import 'package:awesome_icons/awesome_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
@@ -32,53 +33,41 @@ class BottomNavigationExample extends StatefulWidget {
 }
 
 class _BottomNavigationExampleState extends State {
-  int _selectedTab = 0;
+  int selectedTab = 0;
 
-  List _pages = [
-    Center(
-      child: MyHomePage(),
-    ),
-    Center(
-      child: MyHomePage(),
-    ),
-    Center(
-      child: Audio(),
-    ),
-    Center(
-      child: Articles(),
-    ),
-    Center(
-      child:Myliked(),
-    ),
-    Center(
-      child:More(),
-    ),
+  List pages = [
+    MyHomePage(),
+    MyHomePage(),
+    Audio(),
+    Articles(),
+    Myliked(),
+    More(),
   ];
 
-  _changeTab(int index) {
+  changeTab(int index) {
     setState(() {
-      _selectedTab = index;
+      selectedTab = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_selectedTab],
+      body: pages[selectedTab],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedTab,
-        onTap: (index) => _changeTab(index),
+        currentIndex: selectedTab,
+        onTap: (index) => changeTab(index),
         selectedItemColor: Colors.purpleAccent.shade200,
         unselectedItemColor: Colors.grey,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.quora), label: "Quota"),
-          BottomNavigationBarItem(icon: Icon(Icons.audiotrack), label: "Audio"),
+          BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.quora), label: "Quota"),
+          BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.music), label: "Audio"),
           BottomNavigationBarItem(icon: Icon(Icons.article), label: "Articles"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.heart_broken), label: "Liked"),
+              icon: Icon(FontAwesomeIcons.heart), label: "Liked"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.arrow_circle_right), label: "More"),
+              icon: Icon(FontAwesomeIcons.arrowRight), label: "More"),
         ],
       ),
     );

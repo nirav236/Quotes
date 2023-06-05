@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:awesome_icons/awesome_icons.dart';
 
 Widget buildButton(String text, IconData iconData, Function() onTap) {
   return Expanded(
@@ -247,13 +248,13 @@ class More extends StatelessWidget {
         body: ListView(
           children: [
             ListTile(
-              leading: Icon(Icons.image),
+              leading: Icon(FontAwesomeIcons.image),
               title: Text(
                 "Posts",
                 style: TextStyle(fontSize: 20),
               ),
               subtitle: Text("List of quotes"),
-              trailing: Icon(Icons.arrow_right),
+              
               onTap: () {
                 Get.to(Posts());
               },
@@ -265,7 +266,7 @@ class More extends StatelessWidget {
                 style: TextStyle(fontSize: 20),
               ),
               subtitle: Text("App settings"),
-              trailing: Icon(Icons.arrow_right),
+              
               onTap: () {
                 Get.to(Setting());
               },
