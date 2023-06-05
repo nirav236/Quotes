@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'class.dart';
 import 'homepage.dart';
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -50,7 +51,7 @@ class _BottomNavigationExampleState extends State {
       child:Myliked(),
     ),
     Center(
-      child: Text("Settings"),
+      child:More(),
     ),
   ];
 
@@ -77,7 +78,7 @@ class _BottomNavigationExampleState extends State {
           BottomNavigationBarItem(
               icon: Icon(Icons.heart_broken), label: "Liked"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.settings), label: "Settings"),
+              icon: Icon(Icons.arrow_circle_right), label: "More"),
         ],
       ),
     );

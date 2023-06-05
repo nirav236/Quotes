@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 Widget buildButton(String text, IconData iconData, Function() onTap) {
   return Expanded(
@@ -68,7 +70,9 @@ class Naturesound extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.purpleAccent.shade200),
+      appBar: AppBar(
+          title: Center(child: Text("Nature Sounds")),
+          backgroundColor: Colors.purpleAccent.shade200),
       body: Text(""),
     );
   }
@@ -78,7 +82,9 @@ class Meditations extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.purpleAccent.shade200),
+      appBar: AppBar(
+          title: Center(child: Text("Meditations")),
+          backgroundColor: Colors.purpleAccent.shade200),
       body: Text(""),
     );
   }
@@ -88,7 +94,9 @@ class Sleepsound extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.purpleAccent.shade200),
+      appBar: AppBar(
+          title: Center(child: Text("Sleep Sounds")),
+          backgroundColor: Colors.purpleAccent.shade200),
       body: Text(""),
     );
   }
@@ -98,7 +106,9 @@ class Motivational extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.purpleAccent.shade200),
+      appBar: AppBar(
+          title: Center(child: Text("Motivational")),
+          backgroundColor: Colors.purpleAccent.shade200),
       body: Text(""),
     );
   }
@@ -108,7 +118,9 @@ class Notifications extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.purpleAccent.shade200),
+      appBar: AppBar(
+          title: Center(child: Text("Notifications")),
+          backgroundColor: Colors.purpleAccent.shade200),
       body: Text(""),
     );
   }
@@ -118,7 +130,9 @@ class Topquotes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.purpleAccent.shade200),
+      appBar: AppBar(
+          title: Center(child: Text("Top Quotes")),
+          backgroundColor: Colors.purpleAccent.shade200),
       body: Text(""),
     );
   }
@@ -168,7 +182,9 @@ class Posts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.purpleAccent.shade200),
+      appBar: AppBar(
+          title: Center(child: Text("Posts")),
+          backgroundColor: Colors.purpleAccent.shade200),
       body: Text(""),
     );
   }
@@ -203,8 +219,58 @@ class Myliked extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          title: Center(child: Text("My Liked")),
           backgroundColor: Colors.purpleAccent.shade200),
       body: Text(""),
     );
+  }
+}
+
+class Setting extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+          title: Center(child: Text("Setting")),
+          backgroundColor: Colors.purpleAccent.shade200),
+      body: Text(""),
+    );
+  }
+}
+
+class More extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+            title: Text("More"), backgroundColor: Colors.purpleAccent.shade200),
+        body: ListView(
+          children: [
+            ListTile(
+              leading: Icon(Icons.image),
+              title: Text(
+                "Posts",
+                style: TextStyle(fontSize: 20),
+              ),
+              subtitle: Text("List of quotes"),
+              trailing: Icon(Icons.arrow_right),
+              onTap: () {
+                Get.to(Posts());
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text(
+                "Settings",
+                style: TextStyle(fontSize: 20),
+              ),
+              subtitle: Text("App settings"),
+              trailing: Icon(Icons.arrow_right),
+              onTap: () {
+                Get.to(Setting());
+              },
+            ),
+          ],
+        ));
   }
 }
