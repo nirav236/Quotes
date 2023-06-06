@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'class.dart';
+import 'explore.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage();
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -253,9 +254,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     Row(
                       children: [
                         buildButton(
-                          "Attitude Quotes",
+                          "Attitude\nQuotes",
+                          
                           FontAwesomeIcons.quora,
-                          () => explorein(context, "Atitude Quotes"),
+                          () => explorein(context, "Attitude Quotes"),
                         ),
                         buildButton(
                           " Exercises",
@@ -360,7 +362,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
@@ -368,7 +370,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Row(
                         children: [
                           Container(
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Padding(
@@ -389,7 +391,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                 )),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 15,
                           ),
                           Container(
@@ -411,11 +413,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ],
                                 )),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 15,
                           ),
                           Container(
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Row(
@@ -502,7 +504,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   fit: BoxFit.cover),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Container(
@@ -620,7 +622,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   fit: BoxFit.cover),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Container(
@@ -674,7 +676,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
-           SizedBox(height: 20,),
+           const SizedBox(height: 20,),
                Container(
                 decoration: const BoxDecoration(
                   color: Colors.white,
@@ -740,7 +742,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
@@ -748,7 +750,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Row(
                         children: [
                           Container(
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Padding(
@@ -769,7 +771,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                 )),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 15,
                           ),
                           Container(
@@ -791,11 +793,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ],
                                 )),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 15,
                           ),
                           Container(
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Row(

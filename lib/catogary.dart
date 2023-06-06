@@ -24,7 +24,7 @@ class QuotesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Quotes App'),
+        title: const Text('Quotes App'),
       ),
       body: Center(
         child: Column(
@@ -49,7 +49,7 @@ class QuotesScreen extends StatelessWidget {
                   },
                 );
               },
-              child: Text("Inspiration"),
+              child: const Text("Inspiration"),
             ),
             ElevatedButton(
               onPressed: () {
@@ -70,7 +70,7 @@ class QuotesScreen extends StatelessWidget {
                   },
                 );
               },
-              child: Text("Love"),
+              child: const Text("Love"),
             ),
             ElevatedButton(
               onPressed: () {
@@ -91,7 +91,7 @@ class QuotesScreen extends StatelessWidget {
                   },
                 );
               },
-              child: Text("Success"),
+              child: const Text("Success"),
             ),
           ],
         ),

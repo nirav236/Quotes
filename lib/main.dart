@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'class.dart';
+import 'explore.dart';
 import 'homepage.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const BottomNavigationExample(),
+      home: Explorein("Explore"),
     );
   }
 }
@@ -28,6 +29,7 @@ class BottomNavigationExample extends StatefulWidget {
   const BottomNavigationExample({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _BottomNavigationExampleState createState() =>
       _BottomNavigationExampleState();
 }
@@ -36,8 +38,8 @@ class _BottomNavigationExampleState extends State {
   int selectedTab = 0;
 
   List pages = [
-    MyHomePage(),
-    MyHomePage(),
+    const MyHomePage(),
+    const MyHomePage(),
     Audio(),
     Articles(),
     Myliked(),

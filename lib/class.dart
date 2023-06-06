@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:awesome_icons/awesome_icons.dart';
 
 Widget buildButton(String text, IconData iconData, Function() onTap) {
@@ -12,6 +11,7 @@ Widget buildButton(String text, IconData iconData, Function() onTap) {
         child: InkWell(
           onTap: onTap,
           child: Container(
+            // ignore: sort_child_properties_last
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -23,7 +23,7 @@ Widget buildButton(String text, IconData iconData, Function() onTap) {
                     child: Center(
                       child: Text(
                         text,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w600,
                         ),
@@ -44,54 +44,39 @@ Widget buildButton(String text, IconData iconData, Function() onTap) {
   );
 }
 
-void explorein(BuildContext context, String title) {
-  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => Explorein(title)),
-  );
-}
 
-// ignore: must_be_immutable
-class Explorein extends StatelessWidget {
-  String title;
-  Explorein(this.title);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          title: Center(child: Text(title)),
-          backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
-    );
-  }
-}
 
 class Naturesound extends StatelessWidget {
+  const Naturesound({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(child: Text("Nature Sounds")),
+          title: const Center(child: Text("Nature Sounds")),
           backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
+
     );
   }
 }
 
 class Meditations extends StatelessWidget {
+  const Meditations({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(child: Text("Meditations")),
+          title: const Center(child: Text("Meditations")),
           backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
+     
     );
   }
 }
 
 class Sleepsound extends StatelessWidget {
+  const Sleepsound({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
