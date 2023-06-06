@@ -1,7 +1,6 @@
 import 'package:awesome_icons/awesome_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import 'class.dart';
 
@@ -194,17 +193,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         buildButton(
                           "Explore",
-                          Icons.search_outlined,
+                          FontAwesomeIcons.search,
                           () => explorein(context, "Explore"),
                         ),
                         buildButton(
                           "Nature Sounds",
-                          Icons.library_music,
+                          FontAwesomeIcons.music,
                           () => explorein(context, "Nature Sounds"),
                         ),
                         buildButton(
                           "Meditations",
-                          Icons.mediation,
+                          FontAwesomeIcons.medium,
                           () => explorein(context, "Meditations"),
                         ),
                       ],
@@ -213,12 +212,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         buildButton(
                           "Sleep Sounds",
-                          Icons.single_bed_sharp,
+                          FontAwesomeIcons.moon,
                           () => explorein(context, "Sleep Sounds"),
                         ),
                         buildButton(
                           "Motivatational",
-                          Icons.record_voice_over,
+                          FontAwesomeIcons.microphone,
                           () => explorein(context, "Motivatational"),
                         ),
                         buildButton(
@@ -233,7 +232,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         buildButton(
                           "Top Quotes",
-                          Icons.star,
+                          FontAwesomeIcons.star,
                           () => explorein(
                             context,
                             "Top Quotes",
@@ -241,12 +240,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         buildButton(
                           "Life Quotes",
-                          Icons.quora,
+                          FontAwesomeIcons.quora,
                           () => explorein(context, "Life Quotes"),
                         ),
                         buildButton(
                           "Inspirational ",
-                          Icons.quora,
+                          FontAwesomeIcons.quora,
                           () => explorein(context, "Inspirational "),
                         ),
                       ],
@@ -255,17 +254,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         buildButton(
                           "Attitude Quotes",
-                          Icons.quora,
+                          FontAwesomeIcons.quora,
                           () => explorein(context, "Atitude Quotes"),
                         ),
                         buildButton(
                           " Exercises",
-                          Icons.circle_rounded,
+                          FontAwesomeIcons.ggCircle,
                           () => explorein(context, " Exercises"),
                         ),
                         buildButton(
                           "Posts",
-                          Icons.image,
+                          FontAwesomeIcons.images,
                           () => explorein(context, "Posts"),
                         ),
                       ],
@@ -279,12 +278,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         buildButton(
                           "Audios",
-                          Icons.audiotrack,
+                          FontAwesomeIcons.music,
                           () => explorein(context, "Audios"),
                         ),
                         buildButton(
                           "My Liked",
-                          Icons.heart_broken_sharp,
+                          FontAwesomeIcons.heart,
                           () => explorein(context, "My Liked"),
                         ),
                       ],
@@ -475,7 +474,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     SingleChildScrollView(
@@ -491,7 +490,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                   fit: BoxFit.cover),
                             ),
                           ),
-                          SizedBox(width: 10,),
+                          const SizedBox(
+                            width: 10,
+                          ),
                           Container(
                             width: 150,
                             height: 210,
@@ -501,7 +502,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                   fit: BoxFit.cover),
                             ),
                           ),
-                          SizedBox(width: 10,),
+                          SizedBox(
+                            width: 10,
+                          ),
                           Container(
                             width: 150,
                             height: 210,
@@ -511,7 +514,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                   fit: BoxFit.cover),
                             ),
                           ),
-                          SizedBox(width: 10,),
+                          const SizedBox(
+                            width: 10,
+                          ),
                           Container(
                             width: 150,
                             height: 210,
@@ -521,7 +526,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                   fit: BoxFit.cover),
                             ),
                           ),
-                          SizedBox(width: 10,),
+                          const SizedBox(
+                            width: 10,
+                          ),
                           Container(
                             width: 150,
                             height: 210,
@@ -531,7 +538,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                   fit: BoxFit.cover),
                             ),
                           ),
-                          SizedBox(width: 10,),
+                          const SizedBox(
+                            width: 10,
+                          ),
                           Container(
                             width: 150,
                             height: 210,
@@ -546,7 +555,270 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
-              )
+              ),
+
+              const SizedBox(height: 20),
+              Container(
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 15,
+                    ), //BoxShadow
+                    //BoxShadow
+                  ],
+                ),
+                height: 250,
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        const Text(
+                          "Inspire and Motivate",
+                          style: TextStyle(fontSize: 18, color: Colors.purple),
+                        ),
+                        const SizedBox(
+                          width: 170,
+                        ),
+                        GestureDetector(
+                          onTap: () {},
+                          child: const Text(
+                            "see all",
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.purple,
+                                decoration: TextDecoration.underline),
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 150,
+                            height: 210,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/1.png"),
+                                  fit: BoxFit.cover),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Container(
+                            width: 150,
+                            height: 210,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/2.jpeg"),
+                                  fit: BoxFit.cover),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Container(
+                            width: 150,
+                            height: 210,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/3.jpeg"),
+                                  fit: BoxFit.cover),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Container(
+                            width: 150,
+                            height: 210,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/4.jpg"),
+                                  fit: BoxFit.cover),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Container(
+                            width: 150,
+                            height: 210,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/5.jpeg"),
+                                  fit: BoxFit.cover),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Container(
+                            width: 150,
+                            height: 210,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/6.jpeg"),
+                                  fit: BoxFit.cover),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+           SizedBox(height: 20,),
+               Container(
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 15,
+                    ), //BoxShadow
+                    //BoxShadow
+                  ],
+                ),
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Container(
+                      height: 300,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/4.jpg"),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Row(
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            "clicked";
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.grey.shade400,
+                                borderRadius: BorderRadius.circular(6)),
+                            child: const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text(
+                                "#wisdom",
+                                style: TextStyle(fontSize: 18),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        GestureDetector(
+                          onTap: () {},
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.grey.shade400,
+                                borderRadius: BorderRadius.circular(6)),
+                            child: const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text(
+                                "#quota",
+                                style: TextStyle(fontSize: 18),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      color: Colors.grey.shade100,
+                      child: Row(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(),
+                            child: const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        FontAwesomeIcons.heart,
+                                        color: Colors.purple,
+                                        size: 25,
+                                      ),
+                                      Text(
+                                        "SAVE",
+                                        style: TextStyle(
+                                            fontSize: 20, color: Colors.purple),
+                                      )
+                                    ],
+                                  ),
+                                )),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(),
+                            child: const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      FontAwesomeIcons.download,
+                                      color: Colors.purple,
+                                      size: 25,
+                                    ),
+                                    Text(
+                                      "DOWNLOAD",
+                                      style: TextStyle(
+                                          fontSize: 20, color: Colors.purple),
+                                    )
+                                  ],
+                                )),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(),
+                            child: const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      FontAwesomeIcons.share,
+                                      color: Colors.purple,
+                                      size: 25,
+                                    ),
+                                    Text(
+                                      "SHARE",
+                                      style: TextStyle(
+                                          fontSize: 20, color: Colors.purple),
+                                    )
+                                  ],
+                                )),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),

@@ -59,10 +59,13 @@ class _BottomNavigationExampleState extends State {
         onTap: (index) => changeTab(index),
         selectedItemColor: Colors.purpleAccent.shade200,
         unselectedItemColor: Colors.grey,
-        items: [
-          BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.quora), label: "Quota"),
-          BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.music), label: "Audio"),
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(FontAwesomeIcons.home), label: "Home"),
+          BottomNavigationBarItem(
+              icon: Icon(FontAwesomeIcons.quora), label: "Quota"),
+          BottomNavigationBarItem(
+              icon: Icon(FontAwesomeIcons.music), label: "Audio"),
           BottomNavigationBarItem(icon: Icon(Icons.article), label: "Articles"),
           BottomNavigationBarItem(
               icon: Icon(FontAwesomeIcons.heart), label: "Liked"),

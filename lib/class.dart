@@ -232,7 +232,7 @@ class Setting extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(child: Text("Setting")),
+          title: const Center(child: Text("Setting")),
           backgroundColor: Colors.purpleAccent.shade200),
       body: Text(""),
     );
@@ -244,29 +244,28 @@ class More extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text("More"), backgroundColor: Colors.purpleAccent.shade200),
+            title: const Text("More"),
+            backgroundColor: Colors.purpleAccent.shade200),
         body: ListView(
           children: [
             ListTile(
-              leading: Icon(FontAwesomeIcons.image),
-              title: Text(
+              leading: const Icon(FontAwesomeIcons.image),
+              title: const Text(
                 "Posts",
                 style: TextStyle(fontSize: 20),
               ),
-              subtitle: Text("List of quotes"),
-              
+              subtitle: const Text("List of quotes"),
               onTap: () {
                 Get.to(Posts());
               },
             ),
             ListTile(
-              leading: Icon(Icons.settings),
-              title: Text(
+              leading: const Icon(Icons.settings),
+              title: const Text(
                 "Settings",
                 style: TextStyle(fontSize: 20),
               ),
-              subtitle: Text("App settings"),
-              
+              subtitle: const Text("App settings"),
               onTap: () {
                 Get.to(Setting());
               },
