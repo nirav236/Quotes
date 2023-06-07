@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:awesome_icons/awesome_icons.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:share_plus/share_plus.dart';
 
 Widget buildButton(String text, IconData iconData, Function() onTap) {
   return Expanded(
@@ -44,8 +46,6 @@ Widget buildButton(String text, IconData iconData, Function() onTap) {
   );
 }
 
-
-
 class Naturesound extends StatelessWidget {
   const Naturesound({super.key});
 
@@ -55,7 +55,6 @@ class Naturesound extends StatelessWidget {
       appBar: AppBar(
           title: const Center(child: Text("Nature Sounds")),
           backgroundColor: Colors.purpleAccent.shade200),
-
     );
   }
 }
@@ -69,7 +68,6 @@ class Meditations extends StatelessWidget {
       appBar: AppBar(
           title: const Center(child: Text("Meditations")),
           backgroundColor: Colors.purpleAccent.shade200),
-     
     );
   }
 }
@@ -257,5 +255,45 @@ class More extends StatelessWidget {
             ),
           ],
         ));
+  }
+}
+
+class Sharedemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    String msg1 = 'hello! how are you';
+    String msg2 = '50% off https://pub.dev/packages/image_picker';
+
+    shareText() {
+      Share.share(msg2);
+    }
+
+    shareImage() async {
+      XFile? image = await ImagePicker().pickImage(source: ImageSource.gallery);
+      if (image != null) {
+        Share.shareFiles([image.path], text: msg1);
+      }
+    }
+
+    return Scaffold(
+      appBar: AppBar(
+          title: Center(child: Text("Audio")),
+          backgroundColor: Colors.purpleAccent.shade200),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: shareText,
+              child: Text('Share Text'),
+            ),
+            ElevatedButton(
+              onPressed: shareImage,
+              child: Text('Share Image'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

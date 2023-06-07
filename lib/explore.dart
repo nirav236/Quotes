@@ -64,36 +64,37 @@ class Explorein extends StatelessWidget {
       appBar: AppBar(
           title: Center(child: Text(title)),
           backgroundColor: Colors.purpleAccent.shade200),
-      body: Column(
-        children: [
-          Row(
-            children: [
-              Text(
-                'Catogories',
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.purple),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Container(
-            height: 400,
-            decoration: BoxDecoration(
-              color: Colors.grey.shade300,
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 15,
-                ), //BoxShadow
-                //BoxShadow
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Text(
+                  'Catogories',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.purple),
+                ),
               ],
             ),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Container(
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              height: 400,
+              decoration: BoxDecoration(
+                color: Colors.grey.shade300,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
                     Column(
@@ -116,7 +117,7 @@ class Explorein extends StatelessWidget {
                             () => null),
                         imagelogo("Notifications",
                             "assets/icon/notification.png", () => null),
-                              SizedBox(
+                        SizedBox(
                           height: 50,
                         )
                       ],
@@ -128,7 +129,7 @@ class Explorein extends StatelessWidget {
                             "Wisdom", "assets/icon/wisdom.png", () => null),
                         imagelogo("Overthinking",
                             "assets/icon/overthinking.jpeg", () => null),
-                              SizedBox(
+                        SizedBox(
                           height: 50,
                         )
                       ],
@@ -140,7 +141,7 @@ class Explorein extends StatelessWidget {
                             () => null),
                         imagelogo("Self Love", "assets/icon/selflove.png",
                             () => null),
-                              SizedBox(
+                        SizedBox(
                           height: 50,
                         )
                       ],
@@ -153,9 +154,10 @@ class Explorein extends StatelessWidget {
                             "Husting", "assets/icon/husting.png", () => null),
                         imagelogo(
                             "Stress", "assets/icon/stress.png", () => null),
-                       SizedBox(
+                        SizedBox(
                           height: 50,
-                        ) ],
+                        )
+                      ],
                     ),
                     Column(
                       children: [
@@ -165,7 +167,7 @@ class Explorein extends StatelessWidget {
                             () => null),
                         imagelogo("Ambition", "assets/icon/ambitioon.png",
                             () => null),
-                              SizedBox(
+                        SizedBox(
                           height: 50,
                         )
                       ],
@@ -177,7 +179,7 @@ class Explorein extends StatelessWidget {
                             () => null),
                         imagelogo(
                             "Ability", "assets/icon/ability.png", () => null),
-                              SizedBox(
+                        SizedBox(
                           height: 50,
                         )
                       ],
@@ -189,7 +191,7 @@ class Explorein extends StatelessWidget {
                             () => null),
                         imagelogo("Affirmation", "assets/icon/affirmation.png",
                             () => null),
-                              SizedBox(
+                        SizedBox(
                           height: 50,
                         )
                       ],
@@ -201,7 +203,7 @@ class Explorein extends StatelessWidget {
                         imagelogo("Truth", "assets/icon/truth.png", () => null),
                         imagelogo(
                             "Healing", "assets/icon/healing.png", () => null),
-                              SizedBox(
+                        SizedBox(
                           height: 50,
                         )
                       ],
@@ -213,7 +215,7 @@ class Explorein extends StatelessWidget {
                             "Fitness", "assets/icon/fitness.png", () => null),
                         imagelogo(
                             "Growth", "assets/icon/growth.png", () => null),
-                              SizedBox(
+                        SizedBox(
                           height: 50,
                         )
                       ],
@@ -225,7 +227,7 @@ class Explorein extends StatelessWidget {
                             "Kindness", "assets/icon/kindness.png", () => null),
                         imagelogo("Law of\n Attraction",
                             "assets/icon/lawof.png", () => null),
-                              SizedBox(
+                        SizedBox(
                           height: 50,
                         )
                       ],
@@ -238,10 +240,10 @@ class Explorein extends StatelessWidget {
                             "Regret", "assets/icon/regret.png", () => null),
                         imagelogo(
                             "Sadness", "assets/icon/sadness.jpeg", () => null),
-                      
                         SizedBox(
                           height: 50,
-                        )],
+                        )
+                      ],
                     ),
                     Column(
                       children: [
@@ -252,7 +254,8 @@ class Explorein extends StatelessWidget {
                             () => null),
                         SizedBox(
                           height: 50,
-                        )],
+                        )
+                      ],
                     ),
                     Column(
                       children: [
@@ -267,18 +270,247 @@ class Explorein extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(
-                      height: 60,
-                    )
                   ],
                 ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 20,
-          )
-        ],
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              height: 250,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      const Text(
+                        "Empower Your Mind",
+                        style: TextStyle(fontSize: 18, color: Colors.purple),
+                      ),
+                      const SizedBox(
+                        width: 170,
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const Text(
+                          "see all",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.purple,
+                              decoration: TextDecoration.underline),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/1.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/2.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/3.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/4.jpg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/5.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 60,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/6.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              height: 250,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      const Text(
+                        "Empower Your Mind",
+                        style: TextStyle(fontSize: 18, color: Colors.purple),
+                      ),
+                      const SizedBox(
+                        width: 170,
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const Text(
+                          "see all",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.purple,
+                              decoration: TextDecoration.underline),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/1.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/2.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/3.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/4.jpg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/5.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 60,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/6.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
