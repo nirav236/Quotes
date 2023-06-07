@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
               trailing: const Icon(Icons.arrow_right),
               onTap: () {
                 Get.back();
-                Get.to(Notifications());
+                Get.to(const Notifications());
               },
             ),
             ListTile(
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
               trailing: const Icon(Icons.arrow_right),
               onTap: () {
                 Get.back();
-                Get.to(Topquotes());
+                Get.to(const Topquotes());
               },
             ),
             ListTile(
@@ -81,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
               trailing: const Icon(Icons.arrow_right),
               onTap: () {
                 Get.back();
-                Get.to(Motivational());
+                Get.to(const Motivational());
               },
             ),
             ListTile(
@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
               trailing: const Icon(Icons.arrow_right),
               onTap: () {
                 Get.back();
-                Get.to(Sleepsound());
+                Get.to(const Sleepsound());
               },
             ),
             ListTile(
@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
               trailing: const Icon(Icons.arrow_right),
               onTap: () {
                 Get.back();
-                Get.to(Meditations());
+                Get.to(const Meditations());
               },
             ),
             ListTile(
@@ -117,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
               trailing: const Icon(Icons.arrow_right),
               onTap: () {
                 Get.back();
-                Get.to(Naturesound());
+                Get.to(const Naturesound());
               },
             ),
             ListTile(
@@ -129,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
               trailing: const Icon(Icons.arrow_right),
               onTap: () {
                 Get.back();
-                Get.to(Myliked());
+                Get.to(const Myliked());
               },
             ),
             ListTile(
@@ -141,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
               trailing: const Icon(Icons.arrow_right),
               onTap: () {
                 Get.back();
-                Get.to(Posts());
+                Get.to(const Posts());
               },
             ),
             ListTile(
@@ -153,7 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
               trailing: const Icon(Icons.arrow_right),
               onTap: () {
                 Get.back();
-                Get.to(Articles());
+                Get.to(const Articles());
               },
             ),
             ListTile(
@@ -165,7 +165,7 @@ class _MyHomePageState extends State<MyHomePage> {
               trailing: const Icon(Icons.arrow_right),
               onTap: () {
                 Get.back();
-                Get.to(Setting());
+                Get.to(const Setting());
               },
             ),
           ],
@@ -255,7 +255,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         buildButton(
                           "Attitude\nQuotes",
-                          
                           FontAwesomeIcons.quora,
                           () => explorein(context, "Attitude Quotes"),
                         ),
@@ -395,7 +394,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             width: 15,
                           ),
                           Container(
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Row(
@@ -558,7 +557,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
-
               const SizedBox(height: 20),
               Container(
                 decoration: const BoxDecoration(
@@ -676,8 +674,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
-           const SizedBox(height: 20,),
-               Container(
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   boxShadow: [
@@ -775,7 +775,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             width: 15,
                           ),
                           Container(
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Row(

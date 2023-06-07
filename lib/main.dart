@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  Sharedemo(),
+      home: const BottomNavigationExample(),
     );
   }
 }
@@ -39,10 +39,10 @@ class _BottomNavigationExampleState extends State {
   List pages = [
     const MyHomePage(),
     const MyHomePage(),
-    Audio(),
-    Articles(),
-    Myliked(),
-    More(),
+    const Audio(),
+    const Articles(),
+    const Myliked(),
+    const More(),
   ];
 
   changeTab(int index) {

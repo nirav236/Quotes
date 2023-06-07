@@ -79,150 +79,170 @@ class Sleepsound extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(child: Text("Sleep Sounds")),
+          title: const Center(child: Text("Sleep Sounds")),
           backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
+   
     );
   }
 }
 
 class Motivational extends StatelessWidget {
+  const Motivational({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(child: Text("Motivational")),
+          title: const Center(child: Text("Motivational")),
           backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
     );
   }
 }
 
 class Notifications extends StatelessWidget {
+  const Notifications({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(child: Text("Notifications")),
+          title: const Center(child: Text("Notifications")),
           backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
     );
   }
 }
 
 class Topquotes extends StatelessWidget {
+  const Topquotes({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(child: Text("Top Quotes")),
+          title: const Center(child: Text("Top Quotes")),
           backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
     );
   }
 }
 
 class Lifequotes extends StatelessWidget {
+  const Lifequotes({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
     );
   }
 }
 
 class Inspirational extends StatelessWidget {
+  const Inspirational({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
     );
   }
 }
 
 class Attitudequotes extends StatelessWidget {
+  const Attitudequotes({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
     );
   }
 }
 
 class Exercises extends StatelessWidget {
+  const Exercises({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
+     
     );
   }
 }
 
 class Posts extends StatelessWidget {
+  const Posts({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(child: Text("Posts")),
+          title: const Center(child: Text("Posts")),
           backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
+      
     );
   }
 }
 
 class Articles extends StatelessWidget {
+  const Articles({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(child: Text("Articles")),
+          title: const Center(child: Text("Articles")),
           backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
+     
     );
   }
 }
 
 class Audio extends StatelessWidget {
+  const Audio({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(child: Text("Audio")),
+          title: const Center(child: Text("Audio")),
           backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
+      
     );
   }
 }
 
 class Myliked extends StatelessWidget {
+  const Myliked({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(child: Text("My Liked")),
+          title: const Center(child: Text("My Liked")),
           backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
+     
     );
   }
 }
 
 class Setting extends StatelessWidget {
+  const Setting({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
           title: const Center(child: Text("Setting")),
           backgroundColor: Colors.purpleAccent.shade200),
-      body: Text(""),
+      
     );
   }
 }
 
 class More extends StatelessWidget {
+  const More({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -239,7 +259,7 @@ class More extends StatelessWidget {
               ),
               subtitle: const Text("List of quotes"),
               onTap: () {
-                Get.to(Posts());
+                Get.to(const Posts());
               },
             ),
             ListTile(
@@ -250,7 +270,7 @@ class More extends StatelessWidget {
               ),
               subtitle: const Text("App settings"),
               onTap: () {
-                Get.to(Setting());
+                Get.to(const Setting());
               },
             ),
           ],
@@ -259,6 +279,8 @@ class More extends StatelessWidget {
 }
 
 class Sharedemo extends StatelessWidget {
+  const Sharedemo({super.key});
+
   @override
   Widget build(BuildContext context) {
     String msg1 = 'hello! how are you';
@@ -271,13 +293,14 @@ class Sharedemo extends StatelessWidget {
     shareImage() async {
       XFile? image = await ImagePicker().pickImage(source: ImageSource.gallery);
       if (image != null) {
+        // ignore: deprecated_member_use
         Share.shareFiles([image.path], text: msg1);
       }
     }
 
     return Scaffold(
       appBar: AppBar(
-          title: Center(child: Text("Audio")),
+          title: const Center(child: Text("Audio")),
           backgroundColor: Colors.purpleAccent.shade200),
       body: Center(
         child: Column(
@@ -285,11 +308,11 @@ class Sharedemo extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: shareText,
-              child: Text('Share Text'),
+              child: const Text('Share Text'),
             ),
             ElevatedButton(
               onPressed: shareImage,
-              child: Text('Share Image'),
+              child: const Text('Share Image'),
             ),
           ],
         ),

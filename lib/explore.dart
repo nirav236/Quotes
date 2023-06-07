@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 Widget imagelogo(String text, String imagePath, Function() onTap) {
@@ -11,6 +10,7 @@ Widget imagelogo(String text, String imagePath, Function() onTap) {
         child: InkWell(
           onTap: onTap,
           child: Container(
+            // ignore: sort_child_properties_last
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -63,12 +63,12 @@ class Explorein extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           title: Center(child: Text(title)),
-          backgroundColor: Colors.purpleAccent.shade200),
+         ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Row(
+            const Row(
               children: [
                 Text(
                   'Catogories',
@@ -79,14 +79,14 @@ class Explorein extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
               height: 400,
               decoration: BoxDecoration(
                 color: Colors.grey.shade300,
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     blurRadius: 15,
                   ), //BoxShadow
@@ -104,7 +104,7 @@ class Explorein extends StatelessWidget {
                         imagelogo("Positive\nThinking",
                             "assets/icon/positive.png", () => null),
                         imagelogo("Life", "assets/icon/life.png", () => null),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         )
                       ],
@@ -117,7 +117,7 @@ class Explorein extends StatelessWidget {
                             () => null),
                         imagelogo("Notifications",
                             "assets/icon/notification.png", () => null),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         )
                       ],
@@ -129,7 +129,7 @@ class Explorein extends StatelessWidget {
                             "Wisdom", "assets/icon/wisdom.png", () => null),
                         imagelogo("Overthinking",
                             "assets/icon/overthinking.jpeg", () => null),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         )
                       ],
@@ -141,7 +141,7 @@ class Explorein extends StatelessWidget {
                             () => null),
                         imagelogo("Self Love", "assets/icon/selflove.png",
                             () => null),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         )
                       ],
@@ -154,7 +154,7 @@ class Explorein extends StatelessWidget {
                             "Husting", "assets/icon/husting.png", () => null),
                         imagelogo(
                             "Stress", "assets/icon/stress.png", () => null),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         )
                       ],
@@ -167,7 +167,7 @@ class Explorein extends StatelessWidget {
                             () => null),
                         imagelogo("Ambition", "assets/icon/ambitioon.png",
                             () => null),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         )
                       ],
@@ -179,7 +179,7 @@ class Explorein extends StatelessWidget {
                             () => null),
                         imagelogo(
                             "Ability", "assets/icon/ability.png", () => null),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         )
                       ],
@@ -191,7 +191,7 @@ class Explorein extends StatelessWidget {
                             () => null),
                         imagelogo("Affirmation", "assets/icon/affirmation.png",
                             () => null),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         )
                       ],
@@ -203,7 +203,7 @@ class Explorein extends StatelessWidget {
                         imagelogo("Truth", "assets/icon/truth.png", () => null),
                         imagelogo(
                             "Healing", "assets/icon/healing.png", () => null),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         )
                       ],
@@ -215,7 +215,7 @@ class Explorein extends StatelessWidget {
                             "Fitness", "assets/icon/fitness.png", () => null),
                         imagelogo(
                             "Growth", "assets/icon/growth.png", () => null),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         )
                       ],
@@ -227,7 +227,7 @@ class Explorein extends StatelessWidget {
                             "Kindness", "assets/icon/kindness.png", () => null),
                         imagelogo("Law of\n Attraction",
                             "assets/icon/lawof.png", () => null),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         )
                       ],
@@ -240,7 +240,7 @@ class Explorein extends StatelessWidget {
                             "Regret", "assets/icon/regret.png", () => null),
                         imagelogo(
                             "Sadness", "assets/icon/sadness.jpeg", () => null),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         )
                       ],
@@ -252,7 +252,7 @@ class Explorein extends StatelessWidget {
                         imagelogo("Faith", "assets/icon/faith.png", () => null),
                         imagelogo("Leadership", "assets/icon/leadership.png",
                             () => null),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         )
                       ],
@@ -265,7 +265,7 @@ class Explorein extends StatelessWidget {
                             "Parents", "assets/icon/parent.png", () => null),
                         imagelogo("Accomplishment",
                             "assets/icon/acomplishment.png", () => null),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         )
                       ],
@@ -372,8 +372,8 @@ class Explorein extends StatelessWidget {
                                 fit: BoxFit.cover),
                           ),
                         ),
-                        SizedBox(
-                          width: 60,
+                        const SizedBox(
+                          width: 10,
                         ),
                         Container(
                           width: 150,
@@ -390,7 +390,7 @@ class Explorein extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
@@ -491,8 +491,8 @@ class Explorein extends StatelessWidget {
                                 fit: BoxFit.cover),
                           ),
                         ),
-                        SizedBox(
-                          width: 60,
+                        const SizedBox(
+                          width: 10,
                         ),
                         Container(
                           width: 150,

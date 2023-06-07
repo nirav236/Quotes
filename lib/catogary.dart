@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+// ignore: use_key_in_widget_constructors
 class QuotesScreen extends StatelessWidget {
   final Map<String, List<String>> quotes = {
     "inspiration": [
