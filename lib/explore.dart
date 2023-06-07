@@ -62,8 +62,8 @@ class Explorein extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(child: Text(title)),
-         ),
+        title: Center(child: Text(title)),
+      ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
@@ -270,6 +270,15 @@ class Explorein extends StatelessWidget {
                         )
                       ],
                     ),
+                    Column(
+                      children: [
+                        imagelogo(
+                            "Stoicism", "assets/icon/stocism.png", () => null),
+                        const SizedBox(
+                          height: 285,
+                        )
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -289,12 +298,11 @@ class Explorein extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      const Text(
-                        "Empower Your Mind",
-                        style: TextStyle(fontSize: 18, color: Colors.purple),
-                      ),
-                      const SizedBox(
-                        width: 170,
+                      const Expanded(
+                        child: Text(
+                          "People",
+                          style: TextStyle(fontSize: 18, color: Colors.purple),
+                        ),
                       ),
                       GestureDetector(
                         onTap: () {},
@@ -408,12 +416,483 @@ class Explorein extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      const Text(
-                        "Empower Your Mind",
-                        style: TextStyle(fontSize: 18, color: Colors.purple),
+                      const Expanded(
+                        child: Text(
+                          "Positive thinking",
+                          style: TextStyle(fontSize: 18, color: Colors.purple),
+                        ),
                       ),
-                      const SizedBox(
-                        width: 170,
+                      GestureDetector(
+                        onTap: () {},
+                        child: const Text(
+                          "see all",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.purple,
+                              decoration: TextDecoration.underline),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/7.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/8.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/9.jpg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/10.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/11.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/12.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              height: 250,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      const Expanded(
+                        child: Text(
+                          "life",
+                          style: TextStyle(fontSize: 18, color: Colors.purple),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const Text(
+                          "see all",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.purple,
+                              decoration: TextDecoration.underline),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/13.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/14.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/15.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/16.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/17.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/18.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              height: 250,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      const Expanded(
+                        child: Text(
+                          "Attitude",
+                          style: TextStyle(fontSize: 18, color: Colors.purple),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const Text(
+                          "see all",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.purple,
+                              decoration: TextDecoration.underline),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/19.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/20.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/21.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/22.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/23.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/24.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              height: 250,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      const Expanded(
+                        child: Text(
+                          "Confidence",
+                          style: TextStyle(fontSize: 18, color: Colors.purple),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const Text(
+                          "see all",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.purple,
+                              decoration: TextDecoration.underline),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/27.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/28.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/29.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/30.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/31.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/32.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              height: 250,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      const Expanded(
+                        child: Text(
+                          "Notifications",
+                          style: TextStyle(fontSize: 18, color: Colors.purple),
+                        ),
                       ),
                       GestureDetector(
                         onTap: () {},
@@ -500,6 +979,833 @@ class Explorein extends StatelessWidget {
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage("assets/images/6.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              height: 250,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      const Expanded(
+                        child: Text(
+                          "Happy",
+                          style: TextStyle(fontSize: 18, color: Colors.purple),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const Text(
+                          "see all",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.purple,
+                              decoration: TextDecoration.underline),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/7.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/8.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/9.jpg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/10.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/11.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/12.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              height: 250,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      const Expanded(
+                        child: Text(
+                          "Wisdom",
+                          style: TextStyle(fontSize: 18, color: Colors.purple),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const Text(
+                          "see all",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.purple,
+                              decoration: TextDecoration.underline),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/13.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/14.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/15.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/16.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/17.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/18.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              height: 250,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      const Expanded(
+                        child: Text(
+                          "Overthinking",
+                          style: TextStyle(fontSize: 18, color: Colors.purple),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const Text(
+                          "see all",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.purple,
+                              decoration: TextDecoration.underline),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/19.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/20.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/21.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/22.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/23.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/24.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              height: 250,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      const Expanded(
+                        child: Text(
+                          "Love",
+                          style: TextStyle(fontSize: 18, color: Colors.purple),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const Text(
+                          "see all",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.purple,
+                              decoration: TextDecoration.underline),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/27.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/28.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/29.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/30.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/31.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/32.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+             const SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              height: 250,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      const Expanded(
+                        child: Text(
+                          "Encouraging",
+                          style: TextStyle(fontSize: 18, color: Colors.purple),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const Text(
+                          "see all",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.purple,
+                              decoration: TextDecoration.underline),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/7.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/8.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/9.jpg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/10.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/11.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/12.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              height: 250,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      const Expanded(
+                        child: Text(
+                          "Self Love",
+                          style: TextStyle(fontSize: 18, color: Colors.purple),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const Text(
+                          "see all",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.purple,
+                              decoration: TextDecoration.underline),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/13.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/14.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/15.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/16.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/17.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/18.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              height: 250,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      const Expanded(
+                        child: Text(
+                          "Gratitude",
+                          style: TextStyle(fontSize: 18, color: Colors.purple),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const Text(
+                          "see all",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.purple,
+                              decoration: TextDecoration.underline),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/19.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/20.png"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/21.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/22.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/23.jpeg"),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 150,
+                          height: 210,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/24.jpeg"),
                                 fit: BoxFit.cover),
                           ),
                         )
