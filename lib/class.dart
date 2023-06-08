@@ -4,6 +4,55 @@ import 'package:awesome_icons/awesome_icons.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
 
+class LikedImage {
+  final String imagePath;
+
+  LikedImage(this.imagePath);
+}
+
+
+Widget imagelogo2(String text, String imagePath, Function() onTap) {
+  return SizedBox(
+    //  width: 100,
+    child: Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: InkWell(
+        onTap: onTap,
+        child: Container(
+          padding: const EdgeInsets.all(5),
+
+          // ignore: sort_child_properties_last
+          child: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  radius: 15,
+                  backgroundImage: AssetImage(imagePath),
+                  backgroundColor: Colors.white,
+                ),
+                Center(
+                  child: Text(
+                    text,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(5),
+            color: Colors.grey.shade200,
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
 Widget buildButton(String text, IconData iconData, Function() onTap) {
   return Expanded(
     child: SizedBox(
@@ -81,7 +130,6 @@ class Sleepsound extends StatelessWidget {
       appBar: AppBar(
           title: const Center(child: Text("Sleep Sounds")),
           backgroundColor: Colors.purpleAccent.shade200),
-   
     );
   }
 }
@@ -165,7 +213,6 @@ class Exercises extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.purpleAccent.shade200),
-     
     );
   }
 }
@@ -179,7 +226,6 @@ class Posts extends StatelessWidget {
       appBar: AppBar(
           title: const Center(child: Text("Posts")),
           backgroundColor: Colors.purpleAccent.shade200),
-      
     );
   }
 }
@@ -193,7 +239,6 @@ class Articles extends StatelessWidget {
       appBar: AppBar(
           title: const Center(child: Text("Articles")),
           backgroundColor: Colors.purpleAccent.shade200),
-     
     );
   }
 }
@@ -207,7 +252,6 @@ class Audio extends StatelessWidget {
       appBar: AppBar(
           title: const Center(child: Text("Audio")),
           backgroundColor: Colors.purpleAccent.shade200),
-      
     );
   }
 }
@@ -221,7 +265,6 @@ class Myliked extends StatelessWidget {
       appBar: AppBar(
           title: const Center(child: Text("My Liked")),
           backgroundColor: Colors.purpleAccent.shade200),
-     
     );
   }
 }
@@ -235,7 +278,6 @@ class Setting extends StatelessWidget {
       appBar: AppBar(
           title: const Center(child: Text("Setting")),
           backgroundColor: Colors.purpleAccent.shade200),
-      
     );
   }
 }

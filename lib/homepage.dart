@@ -13,6 +13,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  
+  
+ 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,21 +37,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     fit: BoxFit.cover),
               ),
             ),
-            // color: Colors.amber,
-
-            // UserAccountsDrawerHeader(
-            //   accountName: Text("Nirav Thummar"),
-            //   accountEmail: Text("thummarnirav@gmail.com"),
-            // ),
-            // ListTile(
-            //   leading: Icon(Icons.explore),
-            //   title: Text("Explore"),
-            //   trailing: Icon(Icons.arrow_right),
-            //   onTap: () {
-            //     Get.back();
-            //     Get.to(Explorein('Explore'));
-            //   },
-            // ),
             ListTile(
               leading: const Icon(Icons.settings),
               title: const Text(
@@ -121,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.heart_broken),
+              leading: const Icon(FontAwesomeIcons.heart),
               title: const Text(
                 "My Liked",
                 style: TextStyle(fontSize: 20),
@@ -177,6 +166,92 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(children: [
+                    imagelogo2("Explore", "assets/icon/explore.jpg",
+                        () => explorein(context, "Explore")),
+                    imagelogo2("Popular", "assets/icon/popular.jpg",
+                        () => explorein(context, "Explore")),
+                    imagelogo2("Latest", "assets/icon/latest.jpg",
+                        () => explorein(context, "Explore")),
+                    imagelogo2("People", "assets/icon/people.png", () => null),
+                    imagelogo2("Positive Thinking", "assets/icon/positive.png",
+                        () => null),
+                    imagelogo2("Life", "assets/icon/life.png", () => null),
+                    imagelogo2(
+                        "Attitude", "assets/icon/attitude.png", () => null),
+                    imagelogo2(
+                        "Confidence", "assets/icon/confidence.png", () => null),
+                    imagelogo2("Notifications", "assets/icon/notification.png",
+                        () => null),
+                    imagelogo2("Happy", "assets/icon/happy.png", () => null),
+                    imagelogo2("Wisdom", "assets/icon/wisdom.png", () => null),
+                    imagelogo2("Overthinking", "assets/icon/overthinking.jpeg",
+                        () => null),
+                    imagelogo2("Love", "assets/icon/love.png", () => null),
+                    imagelogo2(
+                        "Encouraging", "assets/icon/encourage.png", () => null),
+                    imagelogo2(
+                        "Self Love", "assets/icon/selflove.png", () => null),
+                    imagelogo2(
+                        "Gratitide", "assets/icon/gratitude.png", () => null),
+                    imagelogo2(
+                        "Husting", "assets/icon/husting.png", () => null),
+                    imagelogo2("Stress", "assets/icon/stress.png", () => null),
+                    imagelogo2("Determination", "assets/icon/determination.png",
+                        () => null),
+                    imagelogo2(
+                        "Depression", "assets/icon/depression.png", () => null),
+                    imagelogo2(
+                        "Ambition", "assets/icon/ambitioon.png", () => null),
+                    imagelogo2("Women", "assets/icon/wo,en.png", () => null),
+                    imagelogo2(
+                        "Compassion", "assets/icon/compassion.png", () => null),
+                    imagelogo2(
+                        "Ability", "assets/icon/ability.png", () => null),
+                    imagelogo2("Worry", "assets/icon/worry.png", () => null),
+                    imagelogo2(
+                        "prosperity", "assets/icon/prosperity.png", () => null),
+                    imagelogo2("Affirmation", "assets/icon/affirmation.png",
+                        () => null),
+                    imagelogo2("Productivity", "assets/icon/productivity.png",
+                        () => null),
+                    imagelogo2("Truth", "assets/icon/truth.png", () => null),
+                    imagelogo2(
+                        "Healing", "assets/icon/healing.png", () => null),
+                    imagelogo2("Focus", "assets/icon/focus.png", () => null),
+                    imagelogo2(
+                        "Fitness", "assets/icon/fitness.png", () => null),
+                    imagelogo2("Growth", "assets/icon/growth.png", () => null),
+                    imagelogo2("Money", "assets/icon/money.png", () => null),
+                    imagelogo2(
+                        "Kindness", "assets/icon/kindness.png", () => null),
+                    imagelogo2("Law of Attraction", "assets/icon/lawof.png",
+                        () => null),
+                    imagelogo2("Friend", "assets/icon/friends.png", () => null),
+                    imagelogo2("Regret", "assets/icon/regret.png", () => null),
+                    imagelogo2(
+                        "Sadness", "assets/icon/sadness.jpeg", () => null),
+                    imagelogo2("Self Development", "assets/icon/selfdev.png",
+                        () => null),
+                    imagelogo2("Faith", "assets/icon/faith.png", () => null),
+                    imagelogo2(
+                        "Leadership", "assets/icon/leadership.png", () => null),
+                    imagelogo2("Opportunity", "assets/icon/opportunity.png",
+                        () => null),
+                    imagelogo2("Parents", "assets/icon/parent.png", () => null),
+                    imagelogo2("Accomplishment",
+                        "assets/icon/acomplishment.png", () => null),
+                    imagelogo2(
+                        "Stoicism", "assets/icon/stocism.png", () => null),
+                  ]),
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
               Container(
                 decoration: const BoxDecoration(
                   color: Colors.white,
