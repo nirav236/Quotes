@@ -1,771 +1,287 @@
+import 'package:awesome_icons/awesome_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:quota/view_image.dart';
 
 import 'array.dart';
-
-Widget imagelogo(String text, String imagePath, Function() onTap) {
-  return Expanded(
-    child: SizedBox(
-      height: 80,
-      width: 130,
-      child: Padding(
-        padding: const EdgeInsets.all(5.0),
-        child: InkWell(
-          onTap: onTap,
-          child: Container(
-            // ignore: sort_child_properties_last
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    imagePath,
-                    width: 50,
-                    height: 50,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: Center(
-                      child: Text(
-                        text,
-                        style: const TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Colors.white,
-            ),
-          ),
-        ),
-      ),
-    ),
-  );
-}
-
-void explorein(BuildContext context, String title) {
-  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => Explorein(title)),
-  );
-}
+import 'class.dart';
+import 'explore.dart';
 
 // ignore: must_be_immutable
-class Explorein extends StatelessWidget {
-  String title;
-  Explorein(this.title, {super.key});
+class ViewImage extends StatelessWidget {
+  String? image;
+  ViewImage({super.key, required this.image});
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text(title)),
+        title: const Text(""),
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            const Row(
-              children: [
-                Text(
-                  'Catogories',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.purple),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 10,
-            ),
             Container(
-              height: 400,
-              decoration: BoxDecoration(
-                color: Colors.grey.shade300,
-                boxShadow: const [
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
                   BoxShadow(
                     blurRadius: 15,
                   ), //BoxShadow
                   //BoxShadow
                 ],
               ),
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Column(
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  SizedBox(
+                    height: 400,
+                    width: double.infinity,
+                    child: Image.asset(
+                      image.toString(),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  Row(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          "clicked";
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Colors.grey.shade400,
+                              borderRadius: BorderRadius.circular(6)),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text(
+                              "#wisdom",
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Colors.grey.shade400,
+                              borderRadius: BorderRadius.circular(6)),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text(
+                              "#quota",
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    color: Colors.grey.shade100,
+                    child: Row(
                       children: [
-                        imagelogo(
-                          "People",
-                          "assets/icon/people.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: peopleImage[1],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Positive\nThinking",
-                          "assets/icon/positive.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: positivethink[1],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Life",
-                          "assets/icon/life.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[1],
-                                );
-                              },
-                            ));
-                          },
+                        Container(
+                          decoration: const BoxDecoration(),
+                          child: const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      FontAwesomeIcons.heart,
+                                      color: Colors.purple,
+                                      size: 25,
+                                    ),
+                                    Text(
+                                      "SAVE",
+                                      style: TextStyle(
+                                          fontSize: 20, color: Colors.purple),
+                                    )
+                                  ],
+                                ),
+                              )),
                         ),
                         const SizedBox(
-                          height: 50,
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        imagelogo(
-                          "Attitude",
-                          "assets/icon/attitude.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: peopleImage[2],
-                                );
-                              },
-                            ));
-                          },
+                          width: 15,
                         ),
-                        imagelogo(
-                          "Confidence",
-                          "assets/icon/confidence.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: positivethink[2],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Notifications",
-                          "assets/icon/notification.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[2],
-                                );
-                              },
-                            ));
-                          },
+                        Container(
+                          decoration: const BoxDecoration(),
+                          child: const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    FontAwesomeIcons.download,
+                                    color: Colors.purple,
+                                    size: 25,
+                                  ),
+                                  Text(
+                                    "DOWNLOAD",
+                                    style: TextStyle(
+                                        fontSize: 20, color: Colors.purple),
+                                  )
+                                ],
+                              )),
                         ),
                         const SizedBox(
-                          height: 50,
-                        )
+                          width: 15,
+                        ),
+                        Container(
+                          decoration: const BoxDecoration(),
+                          child: const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    FontAwesomeIcons.share,
+                                    color: Colors.purple,
+                                    size: 25,
+                                  ),
+                                  Text(
+                                    "SHARE",
+                                    style: TextStyle(
+                                        fontSize: 20, color: Colors.purple),
+                                  )
+                                ],
+                              )),
+                        ),
                       ],
                     ),
-                    Column(
-                      children: [
-                        imagelogo(
-                          "Happy",
-                          "assets/icon/happy.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: peopleImage[3],
-                                );
-                              },
-                            ));
-                          },
+                  )
+                ],
+              ),
+            ),
+           const SizedBox(height: 10,),
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 15,
+                  ), //BoxShadow
+                  //BoxShadow
+                ],
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(children: [
+                  Row(
+                    children: [
+                      buildButton(
+                        "Explore",
+                        FontAwesomeIcons.search,
+                        () => explorein(context, "Explore"),
+                      ),
+                      buildButton(
+                        "Nature Sounds",
+                        FontAwesomeIcons.music,
+                        () => explorein(context, "Nature Sounds"),
+                      ),
+                      buildButton(
+                        "Meditations",
+                        FontAwesomeIcons.medium,
+                        () => explorein(context, "Meditations"),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      buildButton(
+                        "Sleep Sounds",
+                        FontAwesomeIcons.moon,
+                        () => explorein(context, "Sleep Sounds"),
+                      ),
+                      buildButton(
+                        "Motivatational",
+                        FontAwesomeIcons.microphone,
+                        () => explorein(context, "Motivatational"),
+                      ),
+                      buildButton(
+                        "Notifications",
+                        Icons.notifications,
+                        () => explorein(context, "Notifications"),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      buildButton(
+                        "Top Quotes",
+                        FontAwesomeIcons.star,
+                        () => explorein(
+                          context,
+                          "Top Quotes",
                         ),
-                        imagelogo(
-                          "Wisdom",
-                          "assets/icon/wisdom.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: positivethink[3],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Overthinking",
-                          "assets/icon/overthinking.jpeg",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[3],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        const SizedBox(
-                          height: 50,
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        imagelogo(
-                          "Love",
-                          "assets/icon/love.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: peopleImage[4],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Encouraging",
-                          "assets/icon/encourage.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: positivethink[4],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Self Love",
-                          "assets/icon/selflove.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[4],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        const SizedBox(
-                          height: 50,
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        imagelogo(
-                          "Gratitide",
-                          "assets/icon/gratitude.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: peopleImage[5],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Husting",
-                          "assets/icon/husting.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: positivethink[5],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Stress",
-                          "assets/icon/stress.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[5],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        const SizedBox(
-                          height: 50,
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        imagelogo(
-                          "Determination",
-                          "assets/icon/determination.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: peopleImage[6],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Depression",
-                          "assets/icon/depression.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: positivethink[6],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Ambition",
-                          "assets/icon/ambitioon.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[6],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        const SizedBox(
-                          height: 50,
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        imagelogo(
-                          "Women",
-                          "assets/icon/wo,en.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: peopleImage[7],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Compassion",
-                          "assets/icon/compassion.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: positivethink[7],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Ability",
-                          "assets/icon/ability.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[7],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        const SizedBox(
-                          height: 50,
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        imagelogo(
-                          "Worry",
-                          "assets/icon/worry.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: peopleImage[8],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "prosperity",
-                          "assets/icon/prosperity.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: positivethink[8],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Affirmation",
-                          "assets/icon/affirmation.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[8],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        const SizedBox(
-                          height: 50,
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        imagelogo(
-                          "Productivity",
-                          "assets/icon/productivity.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: peopleImage[9],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Truth",
-                          "assets/icon/truth.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: positivethink[9],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Healing",
-                          "assets/icon/healing.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[9],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        const SizedBox(
-                          height: 50,
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        imagelogo(
-                          "Focus",
-                          "assets/icon/focus.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: peopleImage[0],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Fitness",
-                          "assets/icon/fitness.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: positivethink[0],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Growth",
-                          "assets/icon/growth.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[0],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        const SizedBox(
-                          height: 50,
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        imagelogo(
-                          "Money",
-                          "assets/icon/money.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: peopleImage[1],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Kindness",
-                          "assets/icon/kindness.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: positivethink[1],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Law of\n Attraction",
-                          "assets/icon/lawof.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[1],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        const SizedBox(
-                          height: 50,
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        imagelogo(
-                          "Friend",
-                          "assets/icon/friends.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: peopleImage[2],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Regret",
-                          "assets/icon/regret.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: positivethink[2],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Sadness",
-                          "assets/icon/sadness.jpeg",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[2],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        const SizedBox(
-                          height: 50,
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        imagelogo(
-                          "Self\nDevelopment",
-                          "assets/icon/selfdev.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: peopleImage[3],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Faith",
-                          "assets/icon/faith.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: positivethink[3],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Leadership",
-                          "assets/icon/leadership.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[3],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        const SizedBox(
-                          height: 50,
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        imagelogo(
-                          "Opportunity",
-                          "assets/icon/opportunity.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: peopleImage[4],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Parents",
-                          "assets/icon/parent.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: positivethink[4],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        imagelogo(
-                          "Accomplishment",
-                          "assets/icon/acomplishment.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[4],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        const SizedBox(
-                          height: 50,
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        imagelogo(
-                          "Stoicism",
-                          "assets/icon/stocism.png",
-                          () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return ViewImage(
-                                  image: life[5],
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                        const SizedBox(
-                          height: 285,
-                        )
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                      buildButton(
+                        "Life Quotes",
+                        FontAwesomeIcons.quora,
+                        () => explorein(context, "Life Quotes"),
+                      ),
+                      buildButton(
+                        "Inspirational ",
+                        FontAwesomeIcons.quora,
+                        () => explorein(context, "Inspirational "),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      buildButton(
+                        "Attitude\nQuotes",
+                        FontAwesomeIcons.quora,
+                        () => explorein(context, "Attitude Quotes"),
+                      ),
+                      buildButton(
+                        " Exercises",
+                        FontAwesomeIcons.ggCircle,
+                        () => explorein(context, " Exercises"),
+                      ),
+                      buildButton(
+                        "Posts",
+                        FontAwesomeIcons.images,
+                        () => explorein(context, "Posts"),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      buildButton(
+                        "Articles",
+                        Icons.article,
+                        () => explorein(context, "Articles"),
+                      ),
+                      buildButton(
+                        "Audios",
+                        FontAwesomeIcons.music,
+                        () => explorein(context, "Audios"),
+                      ),
+                      buildButton(
+                        "My Liked",
+                        FontAwesomeIcons.heart,
+                        () => explorein(context, "My Liked"),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  )
+                ]),
               ),
             ),
             Container(

@@ -2,8 +2,10 @@ import 'package:awesome_icons/awesome_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'array.dart';
 import 'class.dart';
 import 'explore.dart';
+import 'view_image.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -13,34 +15,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
-    List peopleImage = [
-    'assets/images/1.png',
-    'assets/images/2.jpeg',
-    'assets/images/3.jpeg',
-    'assets/images/4.jpg',
-    'assets/images/5.jpeg',
-    'assets/images/6.jpeg',
-    'assets/images/7.jpeg',
-    'assets/images/8.jpeg',
-    'assets/images/9.jpg',
-    'assets/images/10.png',
-  ];
-
-   List positivethink = [
-    'assets/images/11.jpeg',
-    'assets/images/12.jpeg',
-    'assets/images/13.jpeg',
-    'assets/images/14.jpeg',
-    'assets/images/15.jpeg',
-    'assets/images/16.png',
-    'assets/images/17.jpeg',
-    'assets/images/18.jpeg',
-    'assets/images/19.png',
-    'assets/images/20.png',
-  ];
- 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -200,76 +174,565 @@ class _MyHomePageState extends State<MyHomePage> {
                         () => explorein(context, "Explore")),
                     imagelogo2("Latest", "assets/icon/latest.jpg",
                         () => explorein(context, "Explore")),
-                    imagelogo2("People", "assets/icon/people.png", () => null),
-                    imagelogo2("Positive Thinking", "assets/icon/positive.png",
-                        () => null),
-                    imagelogo2("Life", "assets/icon/life.png", () => null),
                     imagelogo2(
-                        "Attitude", "assets/icon/attitude.png", () => null),
+                      "People",
+                      "assets/icon/people.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: peopleImage[1],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Confidence", "assets/icon/confidence.png", () => null),
-                    imagelogo2("Notifications", "assets/icon/notification.png",
-                        () => null),
-                    imagelogo2("Happy", "assets/icon/happy.png", () => null),
-                    imagelogo2("Wisdom", "assets/icon/wisdom.png", () => null),
-                    imagelogo2("Overthinking", "assets/icon/overthinking.jpeg",
-                        () => null),
-                    imagelogo2("Love", "assets/icon/love.png", () => null),
+                      "Positive Thinking",
+                      "assets/icon/positive.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: positivethink[1],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Encouraging", "assets/icon/encourage.png", () => null),
+                      "Life",
+                      "assets/icon/life.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[1],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Self Love", "assets/icon/selflove.png", () => null),
+                      "Attitude",
+                      "assets/icon/attitude.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: peopleImage[2],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Gratitide", "assets/icon/gratitude.png", () => null),
+                      "Confidence",
+                      "assets/icon/confidence.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: positivethink[2],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Husting", "assets/icon/husting.png", () => null),
-                    imagelogo2("Stress", "assets/icon/stress.png", () => null),
-                    imagelogo2("Determination", "assets/icon/determination.png",
-                        () => null),
+                      "Notifications",
+                      "assets/icon/notification.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[2],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Depression", "assets/icon/depression.png", () => null),
+                      "Happy",
+                      "assets/icon/happy.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: peopleImage[3],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Ambition", "assets/icon/ambitioon.png", () => null),
-                    imagelogo2("Women", "assets/icon/wo,en.png", () => null),
+                      "Wisdom",
+                      "assets/icon/wisdom.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: positivethink[3],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Compassion", "assets/icon/compassion.png", () => null),
+                      "Overthinking",
+                      "assets/icon/overthinking.jpeg",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[3],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Ability", "assets/icon/ability.png", () => null),
-                    imagelogo2("Worry", "assets/icon/worry.png", () => null),
+                      "Love",
+                      "assets/icon/love.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: peopleImage[4],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "prosperity", "assets/icon/prosperity.png", () => null),
-                    imagelogo2("Affirmation", "assets/icon/affirmation.png",
-                        () => null),
-                    imagelogo2("Productivity", "assets/icon/productivity.png",
-                        () => null),
-                    imagelogo2("Truth", "assets/icon/truth.png", () => null),
+                      "Encouraging",
+                      "assets/icon/encourage.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: positivethink[4],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Healing", "assets/icon/healing.png", () => null),
-                    imagelogo2("Focus", "assets/icon/focus.png", () => null),
+                      "Self Love",
+                      "assets/icon/selflove.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[4],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Fitness", "assets/icon/fitness.png", () => null),
-                    imagelogo2("Growth", "assets/icon/growth.png", () => null),
-                    imagelogo2("Money", "assets/icon/money.png", () => null),
+                      "Gratitide",
+                      "assets/icon/gratitude.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: peopleImage[5],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Kindness", "assets/icon/kindness.png", () => null),
-                    imagelogo2("Law of Attraction", "assets/icon/lawof.png",
-                        () => null),
-                    imagelogo2("Friend", "assets/icon/friends.png", () => null),
-                    imagelogo2("Regret", "assets/icon/regret.png", () => null),
+                      "Husting",
+                      "assets/icon/husting.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: positivethink[5],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Sadness", "assets/icon/sadness.jpeg", () => null),
-                    imagelogo2("Self Development", "assets/icon/selfdev.png",
-                        () => null),
-                    imagelogo2("Faith", "assets/icon/faith.png", () => null),
+                      "Stress",
+                      "assets/icon/stress.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[5],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Leadership", "assets/icon/leadership.png", () => null),
-                    imagelogo2("Opportunity", "assets/icon/opportunity.png",
-                        () => null),
-                    imagelogo2("Parents", "assets/icon/parent.png", () => null),
-                    imagelogo2("Accomplishment",
-                        "assets/icon/acomplishment.png", () => null),
+                      "Determination",
+                      "assets/icon/determination.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: peopleImage[6],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                     imagelogo2(
-                        "Stoicism", "assets/icon/stocism.png", () => null),
+                      "Depression",
+                      "assets/icon/depression.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: positivethink[6],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Ambition",
+                      "assets/icon/ambitioon.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[6],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Women",
+                      "assets/icon/wo,en.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: peopleImage[7],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Compassion",
+                      "assets/icon/compassion.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: positivethink[7],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Ability",
+                      "assets/icon/ability.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[7],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Worry",
+                      "assets/icon/worry.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: peopleImage[8],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "prosperity",
+                      "assets/icon/prosperity.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: positivethink[8],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Affirmation",
+                      "assets/icon/affirmation.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[8],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Productivity",
+                      "assets/icon/productivity.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: peopleImage[9],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Truth",
+                      "assets/icon/truth.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: positivethink[9],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Healing",
+                      "assets/icon/healing.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[9],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Focus",
+                      "assets/icon/focus.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: peopleImage[0],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Fitness",
+                      "assets/icon/fitness.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: positivethink[0],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Growth",
+                      "assets/icon/growth.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[0],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Money",
+                      "assets/icon/money.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: peopleImage[1],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Kindness",
+                      "assets/icon/kindness.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: positivethink[1],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Law of Attraction",
+                      "assets/icon/lawof.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[1],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Friend",
+                      "assets/icon/friends.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: peopleImage[2],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Regret",
+                      "assets/icon/regret.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: positivethink[2],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Sadness",
+                      "assets/icon/sadness.jpeg",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[2],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Self Development",
+                      "assets/icon/selfdev.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: peopleImage[3],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Faith",
+                      "assets/icon/faith.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: positivethink[3],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Leadership",
+                      "assets/icon/leadership.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[3],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Opportunity",
+                      "assets/icon/opportunity.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: peopleImage[4],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Parents",
+                      "assets/icon/parent.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: positivethink[4],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Accomplishment",
+                      "assets/icon/acomplishment.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[4],
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                    imagelogo2(
+                      "Stoicism",
+                      "assets/icon/stocism.png",
+                      () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ViewImage(
+                              image: life[5],
+                            );
+                          },
+                        ));
+                      },
+                    ),
                   ]),
                 ),
               ),
@@ -574,26 +1037,26 @@ class _MyHomePageState extends State<MyHomePage> {
                         )
                       ],
                     ),
-                   const SizedBox(
-                    height: 5,
-                  ),
-                  SizedBox(
-                    height: 215,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: peopleImage.length,
-                      itemBuilder: (context, index) {
-                        return Container(
-                          margin: const EdgeInsets.only(left: 10),
-                          width: 150,
-                          child: Image.asset(
-                            peopleImage[index],
-                            fit: BoxFit.cover,
-                          ),
-                        );
-                      },
+                    const SizedBox(
+                      height: 5,
                     ),
-                  )
+                    SizedBox(
+                      height: 215,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: peopleImage.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            margin: const EdgeInsets.only(left: 10),
+                            width: 150,
+                            child: Image.asset(
+                              peopleImage[index],
+                              fit: BoxFit.cover,
+                            ),
+                          );
+                        },
+                      ),
+                    )
                   ],
                 ),
               ),
@@ -632,26 +1095,26 @@ class _MyHomePageState extends State<MyHomePage> {
                         )
                       ],
                     ),
-                   const SizedBox(
-                    height: 5,
-                  ),
-                  SizedBox(
-                    height: 215,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: positivethink.length,
-                      itemBuilder: (context, index) {
-                        return Container(
-                          margin: const EdgeInsets.only(left: 10),
-                          width: 150,
-                          child: Image.asset(
-                            positivethink[index],
-                            fit: BoxFit.cover,
-                          ),
-                        );
-                      },
+                    const SizedBox(
+                      height: 5,
                     ),
-                  )
+                    SizedBox(
+                      height: 215,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: positivethink.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            margin: const EdgeInsets.only(left: 10),
+                            width: 150,
+                            child: Image.asset(
+                              positivethink[index],
+                              fit: BoxFit.cover,
+                            ),
+                          );
+                        },
+                      ),
+                    )
                   ],
                 ),
               ),
