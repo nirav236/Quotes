@@ -630,7 +630,7 @@ class Explorein extends StatelessWidget {
                         )
                       ],
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
