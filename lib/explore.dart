@@ -55,6 +55,44 @@ void explorein(BuildContext context, String title) {
 
 // ignore: must_be_immutable
 class Explorein extends StatelessWidget {
+  List peopleImage = [
+    'assets/images/1.png',
+    'assets/images/2.jpeg',
+    'assets/images/3.jpeg',
+    'assets/images/4.jpg',
+    'assets/images/5.jpeg',
+    'assets/images/6.jpeg',
+    'assets/images/7.jpeg',
+    'assets/images/8.jpeg',
+    'assets/images/9.jpg',
+    'assets/images/10.png',
+  ];
+
+   List positivethink = [
+    'assets/images/11.jpeg',
+    'assets/images/12.jpeg',
+    'assets/images/13.jpeg',
+    'assets/images/14.jpeg',
+    'assets/images/15.jpeg',
+    'assets/images/16.png',
+    'assets/images/17.jpeg',
+    'assets/images/18.jpeg',
+    'assets/images/19.png',
+    'assets/images/20.png',
+  ];
+
+   List life = [
+    'assets/images/21.jpeg',
+    'assets/images/22.jpeg',
+    'assets/images/23.jpeg',
+    'assets/images/24.jpeg',
+    'assets/images/25.jpeg',
+    'assets/images/26.jpeg',
+    'assets/images/27.png',
+    'assets/images/28.png',
+    'assets/images/29.png',
+    'assets/images/30.jpeg',
+  ];
   String title;
   Explorein(this.title, {super.key});
 
@@ -317,84 +355,25 @@ class Explorein extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: peopleImage.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
                           width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/1.png"),
-                                fit: BoxFit.cover),
+                          child: Image.asset(
+                            peopleImage[index],
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/2.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/3.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/4.jpg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/5.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/6.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        )
-                      ],
+                        );
+                      },
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -435,84 +414,26 @@ class Explorein extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: positivethink.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
                           width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/7.jpeg"),
-                                fit: BoxFit.cover),
+                          child: Image.asset(
+                            positivethink[index],
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/8.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/9.jpg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/10.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/11.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/12.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        )
-                      ],
+                        );
+                      },
                     ),
-                  ),
+                  )
+                 
                 ],
               ),
             ),
@@ -536,7 +457,7 @@ class Explorein extends StatelessWidget {
                     children: [
                       const Expanded(
                         child: Text(
-                          "life",
+                          "Life",
                           style: TextStyle(fontSize: 18, color: Colors.purple),
                         ),
                       ),
@@ -553,82 +474,23 @@ class Explorein extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: life.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
                           width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/13.jpeg"),
-                                fit: BoxFit.cover),
+                          child: Image.asset(
+                            life[index],
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/14.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/15.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/16.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/17.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/18.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        )
-                      ],
+                        );
+                      },
                     ),
                   )
                 ],
@@ -670,85 +532,26 @@ class Explorein extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                   const SizedBox(
+                    height: 5,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: peopleImage.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
                           width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/19.png"),
-                                fit: BoxFit.cover),
+                          child: Image.asset(
+                            peopleImage[index],
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/20.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/21.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/22.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/23.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/24.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        )
-                      ],
+                        );
+                      },
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -788,85 +591,26 @@ class Explorein extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                   const SizedBox(
+                    height: 5,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: positivethink.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
                           width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/27.png"),
-                                fit: BoxFit.cover),
+                          child: Image.asset(
+                            positivethink[index],
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/28.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/29.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/30.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/31.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/32.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        )
-                      ],
+                        );
+                      },
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -906,85 +650,26 @@ class Explorein extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                 const SizedBox(
+                    height: 5,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: life.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
                           width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/1.png"),
-                                fit: BoxFit.cover),
+                          child: Image.asset(
+                            life[index],
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/2.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/3.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/4.jpg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/5.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/6.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        )
-                      ],
+                        );
+                      },
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -1024,85 +709,26 @@ class Explorein extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                   const SizedBox(
+                    height: 5,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: peopleImage.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
                           width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/7.jpeg"),
-                                fit: BoxFit.cover),
+                          child: Image.asset(
+                            peopleImage[index],
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/8.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/9.jpg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/10.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/11.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/12.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        )
-                      ],
+                        );
+                      },
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -1142,85 +768,26 @@ class Explorein extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                   const SizedBox(
+                    height: 5,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: positivethink.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
                           width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/13.jpeg"),
-                                fit: BoxFit.cover),
+                          child: Image.asset(
+                            positivethink[index],
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/14.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/15.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/16.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/17.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/18.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        )
-                      ],
+                        );
+                      },
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -1260,85 +827,26 @@ class Explorein extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                   const SizedBox(
+                    height: 5,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: life.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
                           width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/19.png"),
-                                fit: BoxFit.cover),
+                          child: Image.asset(
+                            life[index],
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/20.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/21.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/22.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/23.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/24.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        )
-                      ],
+                        );
+                      },
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -1378,90 +886,30 @@ class Explorein extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                   const SizedBox(
+                    height: 5,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: peopleImage.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
                           width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/27.png"),
-                                fit: BoxFit.cover),
+                          child: Image.asset(
+                            peopleImage[index],
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/28.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/29.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/30.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/31.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/32.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        )
-                      ],
+                        );
+                      },
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
-
-             const SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
@@ -1497,85 +945,26 @@ class Explorein extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                 const SizedBox(
+                    height: 5,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: positivethink.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
                           width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/7.jpeg"),
-                                fit: BoxFit.cover),
+                          child: Image.asset(
+                            positivethink[index],
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/8.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/9.jpg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/10.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/11.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/12.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        )
-                      ],
+                        );
+                      },
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -1616,84 +1005,25 @@ class Explorein extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: life.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
                           width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/13.jpeg"),
-                                fit: BoxFit.cover),
+                          child: Image.asset(
+                            life[index],
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/14.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/15.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/16.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/17.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/18.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        )
-                      ],
+                        );
+                      },
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -1733,85 +1063,26 @@ class Explorein extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                   const SizedBox(
+                    height: 5,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: peopleImage.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
                           width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/19.png"),
-                                fit: BoxFit.cover),
+                          child: Image.asset(
+                            peopleImage[index],
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/20.png"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/21.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/22.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/23.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          width: 150,
-                          height: 210,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/24.jpeg"),
-                                fit: BoxFit.cover),
-                          ),
-                        )
-                      ],
+                        );
+                      },
                     ),
-                  ),
+                  )
                 ],
               ),
             ),

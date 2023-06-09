@@ -14,7 +14,31 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   
-  
+    List peopleImage = [
+    'assets/images/1.png',
+    'assets/images/2.jpeg',
+    'assets/images/3.jpeg',
+    'assets/images/4.jpg',
+    'assets/images/5.jpeg',
+    'assets/images/6.jpeg',
+    'assets/images/7.jpeg',
+    'assets/images/8.jpeg',
+    'assets/images/9.jpg',
+    'assets/images/10.png',
+  ];
+
+   List positivethink = [
+    'assets/images/11.jpeg',
+    'assets/images/12.jpeg',
+    'assets/images/13.jpeg',
+    'assets/images/14.jpeg',
+    'assets/images/15.jpeg',
+    'assets/images/16.png',
+    'assets/images/17.jpeg',
+    'assets/images/18.jpeg',
+    'assets/images/19.png',
+    'assets/images/20.png',
+  ];
  
 
   @override
@@ -550,85 +574,26 @@ class _MyHomePageState extends State<MyHomePage> {
                         )
                       ],
                     ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    SingleChildScrollView(
+                   const SizedBox(
+                    height: 5,
+                  ),
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
                       scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          Container(
-                            width: 150,
-                            height: 210,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/1.png"),
-                                  fit: BoxFit.cover),
-                            ),
+                      itemCount: peopleImage.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
+                          width: 150,
+                          child: Image.asset(
+                            peopleImage[index],
+                            fit: BoxFit.cover,
                           ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            width: 150,
-                            height: 210,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/2.jpeg"),
-                                  fit: BoxFit.cover),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            width: 150,
-                            height: 210,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/3.jpeg"),
-                                  fit: BoxFit.cover),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            width: 150,
-                            height: 210,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/4.jpg"),
-                                  fit: BoxFit.cover),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            width: 150,
-                            height: 210,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/5.jpeg"),
-                                  fit: BoxFit.cover),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            width: 150,
-                            height: 210,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/6.jpeg"),
-                                  fit: BoxFit.cover),
-                            ),
-                          )
-                        ],
-                      ),
+                        );
+                      },
                     ),
+                  )
                   ],
                 ),
               ),
@@ -667,85 +632,26 @@ class _MyHomePageState extends State<MyHomePage> {
                         )
                       ],
                     ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    SingleChildScrollView(
+                   const SizedBox(
+                    height: 5,
+                  ),
+                  SizedBox(
+                    height: 215,
+                    child: ListView.builder(
                       scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          Container(
-                            width: 150,
-                            height: 210,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/1.png"),
-                                  fit: BoxFit.cover),
-                            ),
+                      itemCount: positivethink.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(left: 10),
+                          width: 150,
+                          child: Image.asset(
+                            positivethink[index],
+                            fit: BoxFit.cover,
                           ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            width: 150,
-                            height: 210,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/2.jpeg"),
-                                  fit: BoxFit.cover),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            width: 150,
-                            height: 210,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/3.jpeg"),
-                                  fit: BoxFit.cover),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            width: 150,
-                            height: 210,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/4.jpg"),
-                                  fit: BoxFit.cover),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            width: 150,
-                            height: 210,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/5.jpeg"),
-                                  fit: BoxFit.cover),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            width: 150,
-                            height: 210,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("assets/images/6.jpeg"),
-                                  fit: BoxFit.cover),
-                            ),
-                          )
-                        ],
-                      ),
+                        );
+                      },
                     ),
+                  )
                   ],
                 ),
               ),

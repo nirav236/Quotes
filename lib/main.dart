@@ -1,6 +1,8 @@
 import 'package:awesome_icons/awesome_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:quota/explore.dart';
+
 
 import 'class.dart';
 import 'homepage.dart';
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const BottomNavigationExample(),
+      home: Explorein("Explore")
     );
   }
 }
