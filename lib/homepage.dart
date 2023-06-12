@@ -1049,9 +1049,13 @@ class _MyHomePageState extends State<MyHomePage> {
                           return Container(
                             margin: const EdgeInsets.only(left: 10),
                             width: 150,
-                            child: Image.asset(
-                              peopleImage[index],
-                              fit: BoxFit.cover,
+                          
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Image.asset(
+                                peopleImage[index],
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           );
                         },
@@ -1107,9 +1111,12 @@ class _MyHomePageState extends State<MyHomePage> {
                           return Container(
                             margin: const EdgeInsets.only(left: 10),
                             width: 150,
-                            child: Image.asset(
-                              positivethink[index],
-                              fit: BoxFit.cover,
+                             child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Image.asset(
+                                positivethink[index],
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           );
                         },
